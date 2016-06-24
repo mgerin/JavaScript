@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum Numbers</title>
+</head>
+<body>
+    <form>
+        <div>First number: </div>
+        <div><input type="number" id="num1"></div>
+        <div>Second number: </div>
+        <div><input type="number" id="num2"></div>
+        <div><input type="button" value="Calculate Sum" onclick="sumNumbers()"></div>
+        <div>Result: <span id="result"></span></div>
+
+    </form>
+    <script>
+        function sumNumbers(nums) {
+            let num1 =Number(nums[0])
+            let num2 = Number(nums[1])
+            let sum = num1 + num2
+            return sum
+        }
+        function expression(arr) {
+            let val = (30 + 25) / 3 * (35 - 14 - 12)
+            let valSqt = val * val
+            console.log(valSqt)
+        }
+        
+        function threeNumbersSum(arr) {
+            let nums = arr[0].split(' ').map(Number);
+            console.log(check(nums[0], nums[1], nums[2]) ||
+            check(nums[0], nums[2], nums[1]) ||
+            check(nums[1], nums[2], nums[0]) || 'No');
+
+            function check(num1, num2, sum) {
+                if (num1 + num2 != sum)
+                        return false;
+                if (num1 > num2)
+                        [num1, num2] = [num2, num1];
+                return `${num1} + ${num2} = ${sum}`;
+            }
+        }
+    </script>
+</body>
+</html>
