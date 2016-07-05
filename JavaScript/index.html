@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sum Numbers</title>
+    <script src="scripts/script.js"></script>
 </head>
 <body>
     <form>
@@ -12,7 +13,7 @@
         <div><input type="number" id="num2"></div>
         <div><input type="button" value="Calculate Sum" onclick="sumNumbers()"></div>
         <div>Result: <span id="result"></span></div>
-
+        <div>Switch: <input type="button" value="Switch" onclick="symmetricNumbers(['750'])"></div>
     </form>
     <script>
         function sumNumbers(nums) {
@@ -41,6 +42,8 @@
                 return `${num1} + ${num2} = ${sum}`;
             }
         }
+
+
     </script>
 </body>
 </html>
